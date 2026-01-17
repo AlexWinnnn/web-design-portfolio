@@ -2,7 +2,7 @@
 
 /* Global font family */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;        /* Base font size */
   line-height: 1.6;       /* Line height */
   margin: 0;              /* Body margin reset */
@@ -19,13 +19,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Paragraphs */
 p {
-  color: #555;
+  color: #444;
   margin-bottom: 15px;
 }
 
 /* Links */
 a {
-  color: #0066cc;
+  color: #0000cc;
   text-decoration: none;
 }
 
