@@ -13,19 +13,19 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
+  color: #800000;
   margin-bottom: 10px;
 }
 
 /* Paragraphs */
 p {
-  color: #444;
+  color: #4d4d4d;
   margin-bottom: 15px;
 }
 
 /* Links */
 a {
-  color: #0000cc;
+  color: #ff8080;
   text-decoration: none;
 }
 
