@@ -1,5 +1,19 @@
 /* ===== Baseline Styles ===== */
 
+/* Type & spacing scales */
+:root {
+  /* Type scale */
+  --text-sm: 0.75rem;  /* small text */
+  --text-md: 1rem;  /* body text */
+  --text-lg: 2.3rem;  /* section headings */
+  --text-xl: 3.5rem;  /* main headings */
+
+  /* Spacing scale */
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 2.5rem;
+}
+
 /* Global font family */
 body {
   font-family: "Times New Roman", Times, serif;
@@ -13,6 +27,8 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  line-height: 100px;
   color: #800000;
   margin-bottom: 10px;
 }
