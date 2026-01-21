@@ -3,9 +3,9 @@
 :root {
   /* Type scale */
   --text-sm: 0.5rem;  /* small text */
-  --text-md: 1rem;  /* body text */
-  --text-lg: 1.5rem;  /* section headings */
-  --text-xl: 2rem;  /* main headings */
+  --text-md: 0.75rem;  /* body text */
+  --text-lg: 1rem;  /* section headings */
+  --text-xl: 1.25rem;  /* main headings */
 
   /* Spacing scale */
   --space-xs: 0.5rem;
@@ -28,7 +28,7 @@ body {
 /* ===== Sections & Layout ===== */
 
 section {
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-md) var(--space-md);
 }
 
 nav {
@@ -41,7 +41,7 @@ h1 {
   font-size: var(--text-xl);
   line-height: 1.2;
   color: #800000;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 h2 {
