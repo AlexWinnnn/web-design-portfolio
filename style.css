@@ -1,45 +1,74 @@
 /* ===== Baseline Styles ===== */
 
-/* Type & spacing scales */
 :root {
   /* Type scale */
-  --text-sm: 0.75rem;  /* small text */
+  --text-sm: 0.875rem;  /* small text */
   --text-md: 1rem;  /* body text */
-  --text-lg: 2.3rem;  /* section headings */
-  --text-xl: 3.5rem;  /* main headings */
+  --text-lg: 2.25rem;  /* section headings */
+  --text-xl: 3.rem;  /* main headings */
 
   /* Spacing scale */
+  --space-xs: 0.5rem;
   --space-sm: 1rem;
-  --space-md: 1.75rem;
-  --space-lg: 2.5rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
 }
 
-/* Global font family */
+/* ==== Global Styles ==== */
+
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;        /* Base font size */
+  font-size: var(--text-md);        /* Base font size */
   line-height: 1.6;       /* Line height */
   margin: 0;              /* Body margin reset */
   padding: 0;
-}
-
-/* ===== Additional CSS Rules ===== */
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 24px;
-  line-height: 100px;
-  color: #800000;
-  margin-bottom: 10px;
-}
-
-/* Paragraphs */
-p {
   color: #4d4d4d;
-  margin-bottom: 15px;
 }
 
-/* Links */
+/* ===== Sections & Layout ===== */
+
+section {
+  padding: var(--space-lg) var(--space-md);
+}
+
+nav {
+  padding: var(--space-sm) var(--space-md);
+}
+
+/* ==== Headings ==== */
+
+h1 {
+  font-size: var(--text-xl);
+  line-height: 1.2;
+  color: #800000;
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  color: #800000;
+  margin-bottom: var(--space-sm);
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #800000;
+  margin-bottom: var(--space-xs);
+}
+
+/* ==== Paragraphs ==== */
+
+p {
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: #4d4d4d;
+  margin-bottom: var(--space-sm);
+}
+
+/* ==== Links ==== */
+
 a {
   color: #ff8080;
   text-decoration: none;
@@ -49,19 +78,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Lists */
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
+/* ==== Lists ==== */
+
+ul,
+ol {
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
 }
 
 li {
-  margin-bottom: 5px;
+  margin-bottom: var(--space-xs);
 }
 
-/* Images */
+/* ==== Images ==== */
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin-bottom: var(--space-md);
 }
