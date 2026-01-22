@@ -10,14 +10,14 @@
   --color-secondary: #ffa8a8;
 
 /* Baseline color - for body text, paragraphs, and background */
-  --color-text: #4d4d4d;
+  --color-text: #333333;
   --color-background: #ffffff;
   
   /* Type scale */
-  --text-sm: 0.5rem;  /* small text */
-  --text-md: 0.75rem;  /* body text */
-  --text-lg: 1rem;  /* section headings */
-  --text-xl: 1.25rem;  /* main headings */
+  --text-sm: 0.875rem;  /* small text */
+  --text-md: 1rem;  /* body text */
+  --text-lg: 1.25rem;  /* section headings */
+  --text-xl: 1.75rem;  /* main headings */
 
   /* Spacing scale */
   --space-xs: 0.5rem;
@@ -31,7 +31,7 @@
 body {
   font-family: "Times New Roman", Times, serif;
   font-size: var(--text-md);        /* Base font size */
-  line-height: 1.6;       /* Line height */
+  line-height: 1.7;       /* Line height */
   margin: 0;              /* Body margin reset */
   padding: 0;
   color: var(--color-text);
@@ -41,16 +41,35 @@ body {
 /* ===== Sections & Layout ===== */
 
 section {
-  padding: var(--space-md) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
 }
 
 nav {
   padding: var(--space-sm) var(--space-md);
   background-color: var(--color-primary);
+  text-align: center; /* Centers navigation items */
+}
+
+nav li {
+  display: inline-block; /* Makes navigation items align horizontally */
+  margin: 0 var(--space-sm);
+}
+
+nav ul {
+  list-style: none; /* takes away bullet points */
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: var(--color-background); /* High contrast against primary color */
+  font-size: var(--text-sm);
+  margin-right: var(--space-sm);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* ==== Headings ==== */
@@ -59,7 +78,7 @@ h1 {
   font-size: var(--text-xl);
   line-height: 1.2;
   color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 h2 {
@@ -70,7 +89,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  font-size: 1.5rem;
+  font-size: var(--text-md);
   line-height: 1.4;
   color: var(--color-primary);
   margin-bottom: var(--space-xs);
