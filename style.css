@@ -42,7 +42,7 @@ body {
 /* Default: one-column, flexible width */
 
 section {
-  padding: var(--space-md);
+  padding: var(--space-sm); /* smaller padding on mobile */
   max-width: 100%;
 }
 
@@ -147,6 +147,9 @@ img {
 /* ====================================== */
 
 @media (min-width: 768px) {
+  section {
+    padding: var(--space-md);
+  }
   /* enhance layout for tablets and larger */
 }
 
