@@ -146,11 +146,10 @@ img {
 /* Tablet & Desktop Enhancements (768px+) */
 /* ====================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) /* enhance layout for tablets and larger */ {
   section {
     padding: var(--space-md);
   }
-  /* enhance layout for tablets and larger */
 }
 
   section {
