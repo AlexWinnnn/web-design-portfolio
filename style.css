@@ -155,7 +155,7 @@ img {
   section {
     max-width: 70%;
     margin: 0 auto;
-    padding: var(--space-lg);
+    padding: var(--space-sm);
   }
 
   nav li {
