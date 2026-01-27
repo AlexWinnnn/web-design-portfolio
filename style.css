@@ -148,7 +148,7 @@ img {
 
 @media (min-width: 768px) /* enhance layout for tablets and larger */ {
   section {
-    padding: var(--space-md);
+    padding: var(--space-sm);
   }
 }
 
