@@ -153,7 +153,7 @@ img {
 @media (min-width: 768px) /* enhance layout for tablets and larger */ {
   
   section {
-    max-width: 85%;
+    max-width: 95%;
     margin: 0 auto;
     padding: var(--space-md);
   }
