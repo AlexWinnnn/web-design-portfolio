@@ -3,15 +3,11 @@
 :root {
   /* ==== Color System === */
 
-/* Primary color - for headings and navigation */
-  --color-primary: #660000;
-
-/* Secondary color - for links and accent text */
-  --color-secondary: #4d0000;
-
-/* Baseline color - for body text, paragraphs, and background */
-  --color-text: #333333;
-  --color-background: #ffffff;
+  /* Improved colors for contrast */
+  --color-primary: #660000; /* headings and navigation */
+  --color-secondary: #7a0000; /* links and accent text */
+  --color-text: #1f1f1f; /* body text, paragraphs */
+  --color-background: #ffffff; /* background*/
   
   /* Type scale */
   --text-sm: 0.875rem;  /* small text */
@@ -30,16 +26,16 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: var(--text-sm);        /* Base font size */
+  font-size: var(--text-md);        /* Base font size */
   line-height: 1.7;       /* Line height */
-  margin-left: var(--space-xs);              /* Body margin reset */
+  margin-left: 0;              /* Body margin reset */
   padding: 0;
   color: var(--color-text);
   background-color: var(--color-background);
 }
 
 /* ===== Sections & Layout ===== */
-/* Default: one-column, flexible width */
+/* Mobile-first: single column */
 
 section {
   padding: var(--space-sm); /* smaller padding on mobile */
@@ -47,7 +43,7 @@ section {
 }
 
 /* ==== Navigation ==== */
-/* Mobile-first: stacked links */
+/* Mobile-first: stacked links, touch-friendly */
 
 nav {
   padding: var(--space-sm);
@@ -57,7 +53,7 @@ nav {
 
 nav li {
   display: block; /* Makes navigation items align horizontally */
-  margin: var(--space-sm);
+  margin: var(--space-sm) 0;
 }
 
 nav ul {
@@ -68,15 +64,20 @@ nav ul {
 
 nav a {
   color: var(--color-background); /* High contrast against primary color */
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
   text-decoration: none;
 }
 
+/* Visible keyboard focus */
+nav a: focus,
 nav a:hover {
   text-decoration: underline;
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ==== Headings ==== */
+/* Hierarchy clear */
 
 h1 {
   font-size: var(--text-xl);
@@ -115,8 +116,11 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
 }
 
 /* ==== Lists ==== */
@@ -147,15 +151,11 @@ img {
 /* ====================================== */
 
 @media (min-width: 768px) /* enhance layout for tablets and larger */ {
-  section {
-    padding: var(--space-sm);
-  }
-}
-
+  
   section {
     max-width: 85%;
     margin: 0 auto;
-    padding: var(--space-sm);
+    padding: var(--space-md);
   }
 
   nav li {
