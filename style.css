@@ -146,6 +146,20 @@ img {
   margin-bottom: var(--space-md);
 }
 
+.resume-btn {
+  display: incline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.resume-btn:hover {
+  background-color: #444;
+}
+
 /* ====================================== */
 /* Tablet & Desktop Enhancements (768px+) */
 /* ====================================== */
