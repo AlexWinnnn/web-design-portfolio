@@ -147,7 +147,7 @@ img {
 }
 
 .resume-btn {
-  display: incline-block;
+  display: inline-block;
   padding: 10px 20px;
   background-color: #000;
   color: #fff;
@@ -158,6 +158,41 @@ img {
 
 .resume-btn:hover {
   background-color: #444;
+}
+
+/* ==== Portfolio PDF Section ==== */
+.pdf-container {
+  display: flex;
+  justify-content: cetner;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  flex-wrap: wrap; /* Stacks on small screens */
+}
+
+.pdf-item {
+  width: 200px; /* Controls image size */
+  text-align: center;
+}
+
+.pdf-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.pdf-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-item p {
+  margin-top: var(--space-xs);
+  font-size: var(--text-sm);
+  line-height: 1.4;
 }
 
 /* ====================================== */
