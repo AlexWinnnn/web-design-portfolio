@@ -146,8 +146,6 @@ img {
   margin-bottom: var(--space-md);
 }
 
-/* ==== Button System ==== */
-
 .resume-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -161,57 +159,6 @@ img {
 .resume-btn:hover {
   background-color: #444;
 }
-
-/* Primary Button */
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-secondary);
-}
-
-.btn-primary:focus {
-outline: 3px solid var(--color-secondary);
-  outline-offset: 2px;
-}
-
-/* Secondary Button */
-.btn-secondary {
-  background-color: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-}
-
-.btn-secondary:focus {
-  outline: 3px solid var(--color-secondary);
-  outline-offset: 2px;
-}
-
-/* ==== Card Component ==== */
-.card {
-  border: 1px solid #ddd;
-  padding: var(--space-sm)
-  background-color: var(--color-background)
-  width: 260px /* controls card size */
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-}
-
-.card img {
-  width: 100%
-  height: auto
-  margin-bottom: var(--space-sm);
-}
   
 /* ==== PDF Layout ==== */
   
@@ -219,7 +166,7 @@ outline: 3px solid var(--color-secondary);
   display: flex;
   justify-content: center;
   gap: var(--space-lg);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
   flex-wrap: wrap; /* Stacks on small screens */
 }
 
@@ -228,8 +175,23 @@ outline: 3px solid var(--color-secondary);
   text-align: center;
 }
 
+.pdf-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd
+  border-radius: 6px;
+  box-shadow:0 4px 12px rgba(0, 0, 0, 0.08)
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.pdf-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .pdf-item p {
-  margin-top: var(--space-xs);
+  margin-top var(--space-xs);
   font-size: var(--text-sm);
   line-height: 1.4;
 }
@@ -242,17 +204,11 @@ outline: 3px solid var(--color-secondary);
   section {
     max-width: 95%;
     margin: 0 auto;
-    padding: var(--space-lg);
+    padding: var(--space-md);
   }
 
   nav li {
     display: inline-block;
     margin: 0 var(--space-sm);
-  }
-}
-
-@media (max-width: 600px) {
-  .card {
-    width: 100%;
   }
 }
