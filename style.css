@@ -197,11 +197,9 @@ outline: 3px solid var(--color-secondary);
 /* ==== Card Component ==== */
 .card {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: var(--space-sm);
-  margin-bottom: var(--space-lg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: var(--space-sm)
+  background-color: var(--color-background)
+  width: 260px /* controls card size */
 }
 
 .card:hover {
@@ -210,7 +208,8 @@ outline: 3px solid var(--color-secondary);
 }
 
 .card img {
-  border-radius: 6px;
+  width: 100%
+  height: auto
   margin-bottom: var(--space-sm);
 }
   
@@ -240,7 +239,6 @@ outline: 3px solid var(--color-secondary);
 /* ====================================== */
 
 @media (min-width: 768px) /* enhance layout for tablets and larger */ {
-  
   section {
     max-width: 95%;
     margin: 0 auto;
@@ -250,5 +248,11 @@ outline: 3px solid var(--color-secondary);
   nav li {
     display: inline-block;
     margin: 0 var(--space-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
   }
 }
