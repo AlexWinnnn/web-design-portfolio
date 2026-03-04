@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Portfolio | MFJS 3501</title>
-  <link rel="stylesheet" href="style.css">
 
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
@@ -17,16 +16,16 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   
-  <main class="container">
+  <main>
 
     <header>
       <h1>Portfolio</h1>
-      <p class="subtitle">
+      <p>
         Examples of my academic works.
       </p>
     </header>
@@ -45,33 +44,61 @@
 
       <h3>Ski for Light</h3>
 
+      <!-- Card Container -->
       <div class="pdf-container">
 
-        <div class="pdf-item">
-          <a href="ski-for-light-guide-dogs.pdf" download>
-            <img src="images/guide-dog-cover.jpg" alt="Ski for Light - Guide Dogs">
-          </a>
-          <p>Ski for Light - The Guide to Guide Dogs</p>
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="images/guide-dog-cover.jpg"
+            alt="Cover of Ski for Light Guide to Guide Dogs">
+
+          <h3>Guide to Guide Dogs</h3>
+
+          <p>
+            A publication created for Ski for Light focusing on accessibility and guide dog awareness.
+          </p>
+            
+          <a href="ski-for-light-guide-dogs.pdf"
+            class="btn btn-secondary"
+            download>
+          Download PDF
+        </a>
         </div>
 
-        <div class="pdf-item">
-          <a href="ski-for-light-redefine-winter-sports.pdf" download>
-            <img src="images/winter-sports-cover.jpg" alt="Ski for Light - Redefining Winter sports">
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="images/winter-sports-cover.jpg"
+            alt="Cover of Ski for Light Redefining Winter Sports">
+
+          <h3>Redefining Winter Sports</h3>
+
+          <p>
+            A project highlighting adaptive winter sports and inclusive recreation.
+          </p>
+          
+          <a href="ski-for-light-redefine-winter-sports.pdf"
+            class="btn btn-secondary"
+            download>
+            Download PDF
           </a>
-          <p>Ski for Light - Redefining Winter Sports</p>
-        </div>
+        </div> 
 
       </div>
+
+      <hr>
+
+      <h2>Resume</h2>
       
       <p>
         You can download my resume here:
       </p>
       
-      <a href="Alex_Winn_Resume.pdf" class="resume-btn" download>
+      <a href="Alex_Winn_Resume.pdf"
+        class="btn btn-primary"
+        download>
         Download My Resume (PDF)
       </a>
-    </section>
-
+      
     </section>
 
     <footer>
