@@ -18,10 +18,8 @@
   /* 8pt Spacing scale */
   --space-xs: 0.5rem; /* 8px */
   --space-sm: 1rem; /* 16px */
-  --space-md: 1.5rem; /* 24px */
-  --space-lg: 2rem; /* 32px */
-  --space-xl: 2.5rem; /* 40px */
-  --space-xxl: 3rem; /* 48px */
+  --space-md: 2rem; /* 24px */
+  --space-lg: 3rem; /* 32px */
 }
 
 /* ==== Global Styles ==== */
@@ -76,11 +74,6 @@ nav a:hover {
   text-decoration: underline;
   outline: 3px solid #ffffff;
   outline-offset: 2px;
-}
-
-/* Active State */
-nav a.active {
-  border-bottom: 2px solid var(--color-background);
 }
 
 /* ==== Headings ==== */
@@ -150,7 +143,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 /* ==== Button System ==== */
