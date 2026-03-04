@@ -68,13 +68,11 @@ nav a {
   color: var(--color-background); /* High contrast against primary color */
   font-size: var(--text-md);
   text-decoration: none;
-  padding: var(--space-xs);
-  display: inline-block;
 }
 
-/* Hover + Focus */
-nav a:hover,
-nav a:focus {
+/* Visible keyboard focus */
+nav a:focus,
+nav a:hover {
   text-decoration: underline;
   outline: 3px solid #ffffff;
   outline-offset: 2px;
@@ -92,7 +90,7 @@ h1 {
   font-size: var(--text-xl);
   line-height: 1.2;
   color: var(--color-primary);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 h2 {
@@ -136,7 +134,7 @@ a:focus {
 
 ul,
 ol {
-  margin-left: var(--space-lg);
+  margin-left: var(--space-md);
   margin-bottom: var(--space-sm);
   line-height: 1.5;
 }
@@ -157,14 +155,18 @@ img {
 
 /* ==== Button System ==== */
 
-.btn {
+.resume-btn {
   display: inline-block;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 6px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: var(--text-md);
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  cursor: pointer;
+  margin-top: 10px;
+}
+
+.resume-btn:hover {
+  background-color: #444;
 }
 
 /* Primary Button */
