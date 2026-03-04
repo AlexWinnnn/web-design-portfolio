@@ -15,11 +15,13 @@
   --text-lg: 1.25rem;  /* section headings */
   --text-xl: 1.75rem;  /* main headings */
 
-  /* Spacing scale */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 3rem;
+  /* 8pt Spacing scale */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 2.5rem; /* 40px */
+  --space-xxl: 3rem; /* 48px */
 }
 
 /* ==== Global Styles ==== */
@@ -66,14 +68,21 @@ nav a {
   color: var(--color-background); /* High contrast against primary color */
   font-size: var(--text-md);
   text-decoration: none;
+  padding: var(--space-xs);
+  display: inline-block;
 }
 
-/* Visible keyboard focus */
-nav a:focus,
-nav a:hover {
+/* Hover + Focus */
+nav a:hover,
+nav a:focus {
   text-decoration: underline;
   outline: 3px solid #ffffff;
   outline-offset: 2px;
+}
+
+/* Active State */
+nav a.active {
+  border-bottom: 2px solid var(--color-background);
 }
 
 /* ==== Headings ==== */
@@ -83,7 +92,7 @@ h1 {
   font-size: var(--text-xl);
   line-height: 1.2;
   color: var(--color-primary);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 h2 {
@@ -127,7 +136,7 @@ a:focus {
 
 ul,
 ol {
-  margin-left: var(--space-md);
+  margin-left: var(--space-lg);
   margin-bottom: var(--space-sm);
   line-height: 1.5;
 }
@@ -143,50 +152,86 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
-.resume-btn {
+/* ==== Button System ==== */
+
+.btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
+  font-size: var(--text-md);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
 }
 
-.resume-btn:hover {
-  background-color: #444;
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
-/* ==== Portfolio PDF Section ==== */
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+}
+
+.btn-primary:focus {
+outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.btn-secondary:focus {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ==== Card Component ==== */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  border-radius: 6px;
+  margin-bottom: var(--space-sm);
+}
+  
+/* ==== PDF Layout ==== */
+  
 .pdf-container {
   display: flex;
-  justify-content: cetner;
+  justify-content: center;
   gap: var(--space-lg);
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   flex-wrap: wrap; /* Stacks on small screens */
 }
 
 .pdf-item {
   width: 200px; /* Controls image size */
   text-align: center;
-}
-
-.pdf-item img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Hover effect */
-.pdf-item img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .pdf-item p {
@@ -204,7 +249,7 @@ img {
   section {
     max-width: 95%;
     margin: 0 auto;
-    padding: var(--space-md);
+    padding: var(--space-lg);
   }
 
   nav li {
