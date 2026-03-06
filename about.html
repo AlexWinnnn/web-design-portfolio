@@ -81,10 +81,6 @@
       frameborder="0">
       </iframe>
 
-    <section>
-      <button onclick="scrollToTop()" id="backToTopBtn" title="Back to top">Back to Top ↑</button>
-    </section>
-
     <footer>
       <p>
         Built by <strong>Alex Winn</strong> · MFJS 3501
@@ -92,25 +88,6 @@
     </footer>
 
   </main>
-
-  <script>
-    const btn = document.getElementById("backToTopBtn");
-
-    window.addEventListener("scroll", function() {
-      if (window.scrollY > 200) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    });
-
-    function scrollToTop() {
-      window.ScrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-  </script>
 
 </body>
 </html>
