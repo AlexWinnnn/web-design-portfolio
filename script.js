@@ -1,4 +1,4 @@
-// Select elements //
+  // Select elements //
 const button = document.querySelector("#readMoreBtn");
 const extraText = document.querySelector("#extraText");
 
@@ -14,3 +14,21 @@ button.addEventListener("click", () => {
     button.textContent = "Read More";
   }
 });
+
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
+    backToTopBtn.style.display = "block";
+} else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+function scrollToTop () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
